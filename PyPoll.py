@@ -9,9 +9,12 @@ file_to_load = os.path.join("resources", "election_results.csv")
 with open(file_to_load) as election_data:
     file_reader = csv.reader(election_data)
 
+    headers = next(file_reader)
+    print(headers)
+
     # Print each row of the election_results file
-    for row in file_reader:
-        print(row)
+    # for row in file_reader:
+    #     print(row)
 
 
 # Assign a variable for the file to save and the path
