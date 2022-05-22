@@ -6,9 +6,12 @@ import os
 file_to_load = os.path.join("resources", "election_results.csv")
 
 # Open the election_results and read the file
-with open(file_to_load, 'r') as election_data:
-    # Print the file object
-    print(election_data)
+with open(file_to_load) as election_data:
+    file_reader = csv.reader(election_data)
+
+    # Print each row of the election_results file
+    for row in file_reader:
+        print(row)
 
 
 # Assign a variable for the file to save and the path
@@ -23,7 +26,6 @@ with open(file_to_save, "w") as outfile:
 
     # Write three counties to the file
     outfile.write("Arapahoe\nDenver\nJefferson")
-
 
 # 1. The total number of votes cast
 # 2. A complete list of candidates who recieved votes
