@@ -43,6 +43,17 @@ with open(file_to_load) as election_data:
         # Add a vote to the candidates count
         candidate_votes[candidate_name] += 1
 
+# Open election_analysis file for writing
+with open(file_to_save, "w") as outfile:
+    
+    election_results = (
+        f"\nElection Results\n"
+        f"---------------------------\n"
+        f"Total Votes: {total_votes:,}\n"
+        f"---------------------------\n"
+    )
+    outfile.write(election_results)
+
     # Iterate through candidate options to get percentage of total votes
     for candidate in candidate_options:
         votes = candidate_votes[candidate]
@@ -55,24 +66,16 @@ with open(file_to_load) as election_data:
             winning_candidate = candidate
 
         # Print each candidates vote count and vote percentage
-        print(f"{candidate}: {vote_percentage:.1f}% ({votes:,})\n")
+        candidate_results = (f"{candidate}: {vote_percentage:.1f}% ({votes:,})\n")
+
+        outfile.write(candidate_results)
 
     winning_candidate_summary = (
-        f"\n----------------------------------\n"
+        f"----------------------------------\n"
         f"Winner: {winning_candidate}\n"
         f"Winning Vote Count: {winning_count:,}\n"
         f"Winning Percentage: {winning_percentage:.1f}%\n"
         f"----------------------------------"
     )
 
-    print(winning_candidate_summary)
-
-# Open election_analysis file for writing
-with open(file_to_save, "w") as outfile:
-    
-    # Title for election_analysis file
-    outfile.write("Counties in the Election\n")
-    outfile.write("_________________________\n")
-
-    # Write three counties to the file
-    outfile.write("Arapahoe\nDenver\nJefferson")
+    outfile.write(winning_candidate_summary)
