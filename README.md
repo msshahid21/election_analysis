@@ -36,11 +36,11 @@ The purpose of this Election audit is to determine the winning candidate of the 
 Following are the results obtained from the audit:
 - The total number of votes cast in this election were 369,711.
 - Breakdown of votes cast and percentage of total votes for each **County**:
-![Breakdown of County Votes]()
+![Breakdown of County Votes](https://github.com/msshahid21/election_analysis/blob/main/resources/CountyBreakdown.png)
 - The county that had the largest number of votes was Denver.
 - Breakdown of the number of votes and percentage of total votes for each **Candidate**:
-![Breakdown of Candidate Votes]()
-- Given the above graph, it can be seen that Diana DeGette won the election with 73.8% of the total votes.
+![Breakdown of Candidate Votes](https://github.com/msshahid21/election_analysis/blob/main/resources/CandidateBreakdown.png)
+- Given the above chart, it can be seen that Diana DeGette won the election with 73.8% of the total votes.
 
 ## Election-Audit Summary
 In conclusion this script was able to help determine that the winner of this election was Diana DeGette with 73.8% of the total votes, and that Denver was the County that had cast the most votes.
@@ -48,5 +48,6 @@ In conclusion this script was able to help determine that the winner of this ele
 This script could be used to analyze any election dataset as it gets all the unique candidates and counties from the dataset without any input from the user. Additionally, it automatically populates the analysis text file and computer terminal to provide the results of the election.
 
 The following modifications can be made to make it even further usable for other elections:
-- In the event that the script is to be used for other elections, such as for school elections, or presidential elections. The user could be prompted to enter a column in the dataset that they would like to group by to further analyse the data. For example, if they wanted to group by gender to see which gender voted the most in the election. Giving a more general purpose analysis.
-- Additionally, this script could also be modified to give weightings to different counties in the election. For example, in a presidential election each State gets a certain number of seats thus giving each state a different weighting in decided the ultimate winner. So the user could pass a weighting dictionary, that could be used within the script to determine the election winner not just by popular vote but by number of seats won.
+- In the event that the script is to be used for other elections, such as for school elections, or presidential elections. The user could be prompted to enter a column in the dataset that they would like to group by to further analyse the data. For example, if they wanted to group by gender to see which gender voted the most in the election.
+
+- Additionally, this script could also be modified to give weightings to different counties in the election. For example, in a presidential election each State gets a certain number of seats thus giving each state a different weighting in deciding the ultimate winner. So the user could pass a weighting dictionary, that could be used within the script to determine the election winner not just by popular vote but by number of seats won.
