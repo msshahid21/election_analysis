@@ -36,9 +36,11 @@ The purpose of this Election audit is to determine the winning candidate of the 
 Following are the results obtained from the audit:
 - The total number of votes cast in this election were 369,711.
 - Breakdown of votes cast and percentage of total votes for each **County**:
+
 ![Breakdown of County Votes](https://github.com/msshahid21/election_analysis/blob/main/resources/CountyBreakdown.png)
 - The county that had the largest number of votes was Denver.
 - Breakdown of the number of votes and percentage of total votes for each **Candidate**:
+
 ![Breakdown of Candidate Votes](https://github.com/msshahid21/election_analysis/blob/main/resources/CandidateBreakdown.png)
 - Given the above chart, it can be seen that Diana DeGette won the election with 73.8% of the total votes.
 
